@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "@ambar-backend/main",
+  "version": "0.0.1",
+  "main": "index",
+  "dependencies": {
+    "@ambar-backend/npm-dependencies": "file:../npm-dependencies",
+    "@ambar-backend/handlers": "file:../handlers"
+  }
+}

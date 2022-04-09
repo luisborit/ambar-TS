@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "@ambar-backend/npm-dependencies",
+  "version": "0.0.1",
+  "main": "index",
+  "peerDependencies": {
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0"
+  }
+}

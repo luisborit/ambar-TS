@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "@ambar-backend/handlers",
+  "version": "0.0.1",
+  "main": "index",
+  "peerDependencies": {
+    "mysql2":"2.3.3"
+  },
+  "dependencies": {
+    "mysql2":"2.3.3"
+  }
+}

@@ -1,0 +1,9 @@
+#
+# ATTENTION: the actually package manager is _yarn_!
+#
+# pnpm is _only_ used to wire up the built modules inside
+# the dist folder, after ts compilation.
+#
+#
+packages:
+  - 'packages/**'

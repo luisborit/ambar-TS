@@ -1,0 +1,46 @@
+<%- include ('_includes/navbar.ejs')%>
+<body>
+    
+<canvas id="playArea"></canvas>
+
+<div class="content-login">
+    <div class="row">
+        <form id="form-login" action="/auth/login" method="POST">
+                <div class="">
+                    <img src="img/logo.png" class="img-responsive logoi">
+                </div>
+            <div class="input-group">
+                    <span class="input-group-addon" style="background-color: white;">
+                        <span class="glyphicon glyphicon-home text-primary"></span>
+                    </span>
+                    <input type="text" value="1000000000" readonly class="form-control" name="ruc" placeholder="RUC" required autofocus="true">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" style="background-color: white;">
+                        <span class="glyphicon glyphicon-user text-primary"></span>
+                    </span>
+                    <input type="text" value="admin" class="form-control" name="username" placeholder="Usuario" required autofocus="true">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" style="background-color: white;">
+                        <span class="glyphicon glyphicon-lock text-primary"></span>
+                    </span>
+                    <input type="password" value="admin" class="form-control" name="password" placeholder="Contraseña" required>
+                </div>
+                <br>
+                <div class="flex-item">
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion
+                    </button>
+                </div>
+                <div class="content-login-footer">
+                    <br>
+                    Ambar ERP © 2022 Xenial Group
+                </div>
+            </form>                   
+        </div>
+    </div>
+</body>
+</html>
