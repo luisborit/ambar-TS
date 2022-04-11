@@ -5,10 +5,12 @@
   "main": "index",
   "peerDependencies": {
     "express": "^4.17.3",
-    "express-async-handler": "^1.2.0"
+    "express-async-handler": "^1.2.0",
+    "mysql2":"2.3.3"
   },
   "dependencies": {
     "express": "^4.17.3",
-    "express-async-handler": "^1.2.0"
+    "express-async-handler": "^1.2.0",
+    "mysql2":"2.3.3"
   }
 }

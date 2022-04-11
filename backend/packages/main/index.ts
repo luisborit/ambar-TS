@@ -1,5 +1,5 @@
-import { express } from 'express'
-import { login } from '@ambar-backend/handlers/auth/login'
+import express  from 'express'
+import { login } from '@ambar-backend/handlers/index'
 import {Login} from '@ambar-backend/types/MySql'
 
 const app = express();
