@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
-const AuthRoutes = require('./routes/auth')
-const DashboardRoutes = require('./routes/dashboard')
+const {DashboardRoutes ,AuthRoutes, InitialRoutes} = require('./routes/index')
 const cors = require("cors");
 const session = require('express-session');
 const passport = require('passport')
@@ -10,11 +9,10 @@ require('dotenv').config()
 const corsOptions = {
     origin: ['http://localhost:3000','http://localhost:3306'],
     credentials:true,
-    optionsSuccessStatus: 200, // some legacy browsers     (IE11, various SmartTVs) choke on 204
+    optionsSuccessStatus: 200,
   };
-app.use(cors(corsOptions)); // CORS policy
+app.use(cors(corsOptions));
 app.use(function (req, res, next) {
-    //Enabling CORS
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
@@ -32,7 +30,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use("/", InitialRoutes)
 app.use("/auth", AuthRoutes)
-app.use("/erp", DashboardRoutes)
+app.use("/dashboard", DashboardRoutes)
 
 app.listen(process.env.PORT || 3001)
